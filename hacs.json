@@ -1,5 +1,5 @@
 {
-  "name": "Laundry",
+  "name": "Laundry status",
   "render_readme": true,
   "iot_class": "calculated"
 }
