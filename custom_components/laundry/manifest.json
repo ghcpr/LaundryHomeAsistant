@@ -1,10 +1,10 @@
 {
   "domain": "laundry",
-  "name": "Laundry",
-  "codeowners": ["@XeonStaf"],
+  "name": "Laundry status",
+  "codeowners": ["@ghcpr"],
   "config_flow": true,
   "dependencies": [],
-  "documentation": "https://github.com/XeonStaf/LaundryHomeAsistant",
+  "documentation": "https://github.com/ghcpr/LaundryHomeAsistant/",
   "iot_class": "calculated",
   "requirements": [],
   "version": "1.0.0"
