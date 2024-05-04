@@ -1,7 +1,7 @@
 {
   "domain": "laundry",
   "name": "Laundry status",
-  "codeowners": ["@ghcpr"],
+  "codeowners": ["@XeonStaf"],
   "config_flow": true,
   "dependencies": [],
   "documentation": "https://github.com/ghcpr/LaundryHomeAsistant/",
