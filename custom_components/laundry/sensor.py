@@ -114,18 +114,20 @@ class laundrySensorEntity(SensorEntity):
         if now_state == States.RUNNING.value:
             self._max_power = max(self._max_power, current_power)
 
-            if zeta > 1 and current_power < self._max_power / 2:
+            if zeta < -0.5:
+                self._seconds_pass = 0
+            // if zeta > 1 and current_power < self._max_power / 2:
+            if current_power < 2 and zeta > -0.5:
                 self._seconds_pass += 1
                 _LOGGER.error(self._seconds_pass)
             if (
-                zeta > 1
+                current_power < 2 and zeta > -0.5
                 and self._seconds_pass > CYCLES_TO_CONFIRM_FINISHING
-                and current_power < self._max_power / 2
             ):
                 result = States.FINISHING.value
                 self._seconds_pass = 0
 
-        if current_power == 0 and (
+        if current_power < 1 and (
             now_state == States.FINISHING.value or States.RUNNING.value
         ):
             spent_time = datetime.datetime.now() - self._attr_wash_started
