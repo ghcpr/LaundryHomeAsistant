@@ -116,7 +116,6 @@ class laundrySensorEntity(SensorEntity):
 
             if zeta < -0.5:
                 self._seconds_pass = 0
-            // if zeta > 1 and current_power < self._max_power / 2:
             if current_power < 2 and zeta > -0.5:
                 self._seconds_pass += 1
                 _LOGGER.error(self._seconds_pass)
